@@ -13,7 +13,7 @@ func FuzzRegexp(f *testing.F) {
 		if err != nil {
 			t.Skip()
 		}
-		_, err = syntax.Parse(pat, 0)
+		_, err = syntax.Parse(pat, syntax.Perl)
 		if err != nil {
 			t.Errorf("%q: %v", pat, err)
 		}
